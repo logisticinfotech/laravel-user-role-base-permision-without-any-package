@@ -9,15 +9,15 @@ There are lots of package available for restrict role based user permission. But
 	
 	php artisan make:middleware CheckRole
 
-Above command will create new file checkRole inside your app/Http/Middleware folder.
+    Above command will create new file checkRole inside your app/Http/Middleware folder.
 
-we must register middleware in app/Http/Kernel.php class otherwise it will give error our middleware class not found.
+    we must register middleware in app/Http/Kernel.php class otherwise it will give error our middleware class not found.
 
 
-Ex:
-	protected $routeMiddleware = [
-        'checkRole' => \App\Http\Middleware\CheckRole::class,
- 	];
+    Ex:
+        protected $routeMiddleware = [
+            'checkRole' => \App\Http\Middleware\CheckRole::class,
+        ];
 
 
  - **generate table by below command:**
@@ -32,7 +32,8 @@ Ex:
 
     php artisan db:seed
 
-Demo user:
+- **Demo Users:**
+
 **Admin**
 
     Email:user@admin.com
