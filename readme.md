@@ -21,23 +21,34 @@ Ex:
 
 
  - **generate table by below command:**
+
     php artisan migrate
 
 - **create user seeder by below command:**
+
     php artisan make:seeder UsersTableSeeder
 
 - **insert users by below command:**
+
     php artisan db:seed
 
 Demo user:
 **Admin**
+
     Email:user@admin.com
+
     Password:123456
+
 **Manager**
+
     Email:user@manager.com
+
     Password:123456
+
 **Employee**
+
     Email:user@employee.com
+
     Password:123456
 
 
