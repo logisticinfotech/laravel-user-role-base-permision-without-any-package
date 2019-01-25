@@ -3,13 +3,9 @@
 
 ## How to handle different type of user role in laravel without any packages?
 
-What is middleware?
-Laravel Middleware are the easy approach of verifying HTTP requests before they are passed to the controller.
-It is provide filter your requests from client to server.
-
 There are lots of package available for restrict role based user permission. But if you don’t want to use package and complexity then create custom middleware and we can handle many role easily.
 
--We can create custom middleware by php artisan command:
+- We can create custom middleware by php artisan command:
 	
 	**php artisan make:middleware CheckRole**
 
@@ -24,7 +20,7 @@ Ex:
  	];
 
 
--**Handle multiple user role below code:**
+- **Handle multiple user role below code:**
 
 
 public function handle($request, Closure $next,$role='')
@@ -60,13 +56,24 @@ public function handle($request, Closure $next,$role='')
         }
     }
 
-    -**generate table by below command:**
+    - **generate table by below command:**
         php artisan migrate
 
-    -**create user seeder by below command:**
+    - **create user seeder by below command:**
         php artisan make:seeder UsersTableSeeder
 
-    -** insert users by below command:**
+    - ** insert users by below command:**
         php artisan db:seed
 
-[you can check full detail about it. you can open our blog](https://laravel.com/docs/routing).
+        Demo user:
+            **Admin**
+                Email:user@admin.com
+                Password:123456
+            **Manager**
+                Email:user@manager.com
+                Password:123456
+            **Employee**
+                Email:user@employee.com
+                Password:123456
+
+[You can check full detail about it. you can open our blog](https://github.com/logisticinfotech/laravel-user-role-base-permision-without-any-package).
