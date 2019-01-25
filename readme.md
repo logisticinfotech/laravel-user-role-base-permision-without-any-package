@@ -5,9 +5,9 @@
 
 There are lots of package available for restrict role based user permission. But if you don’t want to use package and complexity then create custom middleware and we can handle many role easily.
 
-- We can create custom middleware by php artisan command:
+- **We can create custom middleware by php artisan command:**
 	
-	**php artisan make:middleware CheckRole**
+	php artisan make:middleware CheckRole
 
 Above command will create new file checkRole inside your app/Http/Middleware folder.
 
@@ -20,9 +20,30 @@ Ex:
  	];
 
 
+ - **generate table by below command:**
+        php artisan migrate
+
+    - **create user seeder by below command:**
+        php artisan make:seeder UsersTableSeeder
+
+    - **insert users by below command:**
+        php artisan db:seed
+
+        Demo user:
+            **Admin**
+                Email:user@admin.com
+                Password:123456
+            **Manager**
+                Email:user@manager.com
+                Password:123456
+            **Employee**
+                Email:user@employee.com
+                Password:123456
+
+
 - **Handle multiple user role below code:**
 
-
+```
 public function handle($request, Closure $next,$role='')
 {
 
@@ -54,26 +75,7 @@ public function handle($request, Closure $next,$role='')
         {
             return redirect('login');
         }
-    }
-
-    - **generate table by below command:**
-        php artisan migrate
-
-    - **create user seeder by below command:**
-        php artisan make:seeder UsersTableSeeder
-
-    - ** insert users by below command:**
-        php artisan db:seed
-
-        Demo user:
-            **Admin**
-                Email:user@admin.com
-                Password:123456
-            **Manager**
-                Email:user@manager.com
-                Password:123456
-            **Employee**
-                Email:user@employee.com
-                Password:123456
+}
+```
 
 [You can check full detail about it. you can open our blog](https://github.com/logisticinfotech/laravel-user-role-base-permision-without-any-package).
