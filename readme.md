@@ -90,4 +90,4 @@ public function handle($request, Closure $next,$role='')
 }
 ```
 
-[You can check full detail about it. you can open our blog](https://github.com/logisticinfotech/laravel-user-role-base-permision-without-any-package).
+[You can check full detail about it. you can open our blog](https://www.logisticinfotech.com/blog/handle-different-types-user-role-laravel).
